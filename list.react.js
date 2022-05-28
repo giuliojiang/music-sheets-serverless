@@ -4,7 +4,7 @@ function List(props) {
     const [data, setData] = React.useState(null);
     React.useEffect(() => {
         (async () => {
-            const request = await fetch(`list.json`);
+            const request = await fetch(window.location.href + `list.json`);
             const response = await request.json();
             setData(response);
         })();

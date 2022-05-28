@@ -5,7 +5,7 @@ function Viewer(props) {
 
     const [index, setIndex] = React.useState(0);
 
-    const imagePath = `sheets/${name}/${files[index]}`;
+    const imagePath = window.location.href + `sheets/${name}/${files[index]}`;
 
     const onClick = React.useCallback((event) => {
         const screen = {
