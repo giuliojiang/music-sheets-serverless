@@ -29,6 +29,14 @@ html {
     right: 0;
 }
 
+.list-link {
+    font-size: 30px;
+}
+
+.list-link-container {
+    padding: 20px;
+}
+
 .viewer-container {
     left: 0;
     top: 0;
