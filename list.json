@@ -1,5 +1,16 @@
 [
   {
+    "name": "amusement-park",
+    "files": [
+      "01.png",
+      "02.png",
+      "03.png",
+      "04.png",
+      "05.png",
+      "06.png"
+    ]
+  },
+  {
     "name": "an-end-once-and-for-all",
     "files": [
       "an-end-once-and-for-all-1.png",
@@ -84,6 +95,13 @@
       "08.png",
       "09.png",
       "10.png"
+    ]
+  },
+  {
+    "name": "dire-dire-docks",
+    "files": [
+      "01.png",
+      "02.png"
     ]
   },
   {
@@ -174,6 +192,13 @@
       "marriage-damour-3.png",
       "marriage-damour-4.png",
       "marriage-damour-5.png"
+    ]
+  },
+  {
+    "name": "moo-moo-farm-yoshi-valley",
+    "files": [
+      "01.png",
+      "02.png"
     ]
   },
   {
