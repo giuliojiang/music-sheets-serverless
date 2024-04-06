@@ -7,6 +7,30 @@ function Viewer(props) {
 
     const imagePath = window.location.href + `sheets/${name}/${files[index]}`;
 
+    React.useEffect(() => {
+        document.onkeyup = (e) => {
+            if (e.code === 37 || e.code === 38) {
+                setIndex(oldIndex => {
+                    if (oldIndex > 0) {
+                        return oldIndex - 1;
+                    }
+                    return oldIndex;
+                });
+            }
+            if (e.code === 39 || e.code === 40) {
+                setIndex(oldIndex => {
+                    if (oldIndex < (files.length - 1)) {
+                        return oldIndex + 1;
+                    }
+                    return oldIndex;
+                })
+            }
+        }
+        return () => {
+            document.onkeyup = null;
+        }
+    }, [files]);
+
     const onClick = React.useCallback((event) => {
         const screen = {
             x: window.innerWidth,
