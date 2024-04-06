@@ -28,7 +28,7 @@ function Root() {
         passwordChecked ? (
             <Content />
         ) : (
-            <input placeholder="passcode" className="root-pswd" type="password" onChange={onChange}></input>
+            <input autoFocus placeholder="passcode" className="root-pswd" type="password" onChange={onChange}></input>
         )
     )
 }

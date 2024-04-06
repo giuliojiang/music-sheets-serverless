@@ -15,7 +15,7 @@ function List(props) {
         ) : (
             data.map(d => {
                 return (
-                    <div className="list-link-container">
+                    <div className="list-link-container" key={d.name}>
                         <a className="list-link" onClick={() => {
                             onSelect(d);
                         }}>{d.name}</a>
