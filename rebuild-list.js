@@ -8,10 +8,11 @@ function exploreDir(dirName) {
     const files = fs.readdirSync(path.resolve('./sheets', dirName));
     const images = [];
     for (const fileName of files) {
-        if (fileName.endsWith('.png')) {
+        if (fileName.endsWith('.png') || fileName.endsWith('.jpg')) {
             images.push(fileName);
         }
     }
+    images.sort();
     if (images.length > 0) {
         result.push({
             name: dirName,
