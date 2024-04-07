@@ -24,13 +24,20 @@ function Root() {
             setPasswordChecked(true);
         }
     }, [setPasswordChecked]);
-    return (
-        passwordChecked ? (
+    const [rotated, setRotated] = React.useState(false);
+    if (passwordChecked) {
+        return <div className={`root-view ${rotated ? 'rotated' : ''}`}>
+            <div onClick={() => {setRotated(previousValue => {
+                const newRotated = !previousValue;
+                return newRotated;
+            })}}>
+                Rotate
+            </div>
             <Content />
-        ) : (
-            <input autoFocus placeholder="passcode" className="root-pswd" type="password" onChange={onChange}></input>
-        )
-    )
+        </div>
+    } else {
+        return <input autoFocus placeholder="passcode" className="root-pswd" type="password" onChange={onChange}></input>
+    }
 }
 
 root.render(React.createElement(Root));
