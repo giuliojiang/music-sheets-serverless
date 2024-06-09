@@ -90,8 +90,32 @@ function Controller() {
     return () => {
         document.onkeyup = null;
     }
-}, []);
-  return <div className="controller"></div>
+  }, []);
+  const styles = {
+    controller: {
+      position: 'absolute',
+      left: 0,
+      top: 0,
+      width: '100%',
+      height: '100%',
+      backgroundColor: 'rgb(192, 147, 164)',
+      display: 'flex',
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+    },
+    item: {
+      width: '50%',
+      height: '50%',
+      fontSize: '5vw',
+      userSelect: 'none'
+    }
+  }
+  return <div style={styles.controller}>
+    <div style={{backgroundColor: '#d6bac7', ...styles.item}} onClick={() => {sendCmd('escape')}}>ESC</div>
+    <div style={{backgroundColor: '#bbd1b8', ...styles.item}} onClick={() => {sendCmd('enter')}}>ENTER</div>
+    <div style={{backgroundColor: '#cfceb6', ...styles.item}} onClick={() => {sendCmd('prev')}}>PREV</div>
+    <div style={{backgroundColor: '#babbd6', ...styles.item}} onClick={() => {sendCmd('next')}}>NEXT</div>
+  </div>
 }
 
 function Root() {
